@@ -1,0 +1,123 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# 博客名称
+title: well's blog
+# 副标题
+subtitle: 一步一个脚印，一天一点进步
+# 简介
+description: 记录生活点滴
+# 博客作者
+author: well
+# 邮箱
+email: hwhPiano@gmail.com
+# 博客语言
+language: zh-CN
+# 时区
+timezone:
+
+# URL 博客地址，与申请的 GitHub 一致
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://hweih.github.io
+root: /
+# 博客链接格式
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+# 忽略渲染 source 文件夹下的指定文件
+skip_render: README.md
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+#max_open_file: 100 # 最大的页面打开数量
+#multi_thread: true # 是否启用多线程
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Archives
+# 0 : 全部禁用
+# 1 : 只禁用分页
+# 2 : 开启分页
+#archive: 1 # 设置为1 是全部展示
+#category: 2
+#tag: 2
+
+# Server
+#port: 4000 # 本地服务器端口
+#server_ip: localhost # 本地服务器地址
+#logger: false
+#logger_format: dev
+
+# Date / Time format 日期 / 时间格式
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination 分页，每页文章数量
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Disqus
+#disqus_shortname:  # disqus的用户名称
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+# 站内搜索配置
+search:
+  path: search.xml
+  field: all
+# RSS配置
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+# Sitemate 配置
+sitemap:
+  path: sitemap.xml
+baidusitemap: # 由于 GitHub 屏蔽了百度爬虫，GitHub Pages 中的内容无法被百度索引
+  path: baidusitemap.xml
+## Themes: https://hexo.io/themes/
+theme: yelee # 博客主题
+#exclude_generator:  # 排除指定的生成器
+
+# deployment 发布设置
+## Docs: https://hexo.io/docs/deployment.html
+## 第一种方式：HTTP协议，在 Git Bush 中使用命令
+#deploy:
+#  type: git
+#  repository: https://github.com/HweiH/HweiH.github.io.git
+#  branch: master
+## 第二种方式：SSH协议，可在 Git Bush 中使用命令
+deploy:
+  type: git
+  repository: git@github.com:HweiH/HweiH.github.io.git
+  branch: master
